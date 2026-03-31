@@ -1,0 +1,6 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: black; /* Делает фон черным */
+    color: white;            /* Делает текст белым, чтобы его было видно */
+}
