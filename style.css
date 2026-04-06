@@ -63,7 +63,7 @@ a {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 3px solid rgb(42, 29, 6); /* Цвет фона, чтобы был вырез как в Discord */
+    border: 3px solid rgb(42, 29, 6); /* Вырез */
     background-color: #80848e; /* Цвет по умолчанию (offline) */
 }
 
