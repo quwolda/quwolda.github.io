@@ -5,10 +5,13 @@
         <meta charset="UTF-8">
         <title>Quwolda's card</title>
         <link rel="icon" href="img/icon.png" type="image/png">
+
+        <meta property="og:title" content="Quwolda's card">
+        <meta property="og:description" content="Мой сайт-карточка">
     </head>
 
     <body>
-        <div class="container">
+        <div class="box">
             <div class="side"></div>
             <div class="center">
                 <div class="title">
@@ -16,11 +19,20 @@
                     <div class="square" id="sq2"></div>
                     <div class="square" id="sq3"></div>
                     <div class="square" id="sq4"></div>
-                    <h1><a href="https://github.com/quwolda">Quwolda</a></h1>
-                    <p>Это мой сайт карточка на котором я буду оттачивать свои навыки html, css и javascript программирования</p>
+
+                    <div class="speech-bubble-discord">
+                        <div class="avatar-container">
+                            <img id="discord-avatar" src="" alt="Avatar">
+                            <div id="status-dot" class="status-dot"></div>
+                        </div>
+                        <h1><a href="https://github.com/quwolda" id="discord-name">Quwolda</a></h1>
+                        <p>Это мой сайт карточка на котором я буду оттачивать свои навыки html, css и javascript программирования</p>
+                    </div>
+
                 </div>
             </div>
             <div class="side"></div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

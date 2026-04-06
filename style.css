@@ -1,16 +1,16 @@
 body {
-    text-align: center;
-    font-family: sans-serif;
-    background-color: black; /* Делает фон черным */
-    color: white;            /* Делает текст белым */
+  text-align: center;
+  font-family: sans-serif;
+  background-color: black; /* Делает фон черным */
+  color: white;            /* Делает текст белым */
 }
 
 a {
-    color: #ffcc00; /* Цвет гиперссылки */
-    text-decoration: none; /* Убирает нижнее подчеркивание*/
+  color: #ffcc00; /* Цвет гиперссылки */
+  text-decoration: none; /* Убирает нижнее подчеркивание*/
 }
 
-.container {
+.box {
   display: flex;       /* Включаем гибкий контейнер */
   height: 100vh;       /* Растягиваем на всю высоту экрана */
 }
@@ -24,38 +24,68 @@ a {
   flex: 1;             /* Центр занимает всё оставшееся свободное место */
   background: rgb(42, 29, 6);
   color: white;
+  padding: 5px;
 }
 
 .title {
-    background: rgb(86, 81, 13);
-    position: relative; /* Создаем систему координат для квадратиков */
-    padding: 20px;
-    min-height: 150px;
+  background: rgb(86, 81, 13);
+  position: relative; /* Создаем систему координат для квадратиков */
+  padding: 20px;
+  min-height: 150px;
+  border-radius: 5px
+
+}
+
+.speech-bubble-discord {
+  position: relative;
+  text-align: center; /* Центрирует всё внутри */
+  min-height: 100px;
+  background: rgb(62, 44, 14);
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 100px;
+}
+
+#discord-avatar {
+  position: absolute; /* Вынимаем из общего потока */
+  left: 15px;         /* Прижимаем к левому краю */
+  top: 50%;
+  transform: translateY(-50%); /* Центрируем вертикально */
+  width: 80px;
+  border-radius: 50%;
+}
+
+.status-dot {
+    position: absolute;
+    top: 60%;
+    left: 70px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid rgb(42, 29, 6); /* Цвет фона, чтобы был вырез как в Discord */
+    background-color: #80848e; /* Цвет по умолчанию (offline) */
+}
+
+/* Цвета статусов */
+.status-online { background-color: #23a55a; }
+.status-idle { background-color: #f0b232; }
+.status-dnd { background-color: #f23f43; }
+.status-offline { background-color: #80848e; }
+
+#discord-name {
+  display: inline-block;
+  margin: 0; 
 }
 
 .square {
-    width: 10px;
-    height: 10px;
-    background: rgb(55, 55, 55);
-    position: absolute; /* Позволяет двигать элемент по координатам */
+  width: 10px;
+  height: 10px;
+  background: rgb(55, 55, 55);
+  position: absolute; /* Позволяет двигать элемент по координатам */
 }
 
-#sq1 {
-    top: 10px;
-    left: 10px;
-}
-
-#sq2 {
-    bottom: 10px;
-    right: 10px;
-}
-
-#sq3 {
-    top: 10px;
-    right: 10px;
-}
-
-#sq4 {
-    bottom: 10px;
-    left: 10px;
-}
+#sq1 {top: 10px; left: 10px; border-radius: 50%;}
+#sq2 {bottom: 10px; right: 10px; border-radius: 50%;}
+#sq3 {top: 10px; right: 10px; border-radius: 50%;}
+#sq4 {bottom: 10px; left: 10px; border-radius: 50%;}
